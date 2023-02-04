@@ -1,0 +1,359 @@
+@import "~bootstrap/scss/bootstrap";
+
+$primaryColor: #f1f0ed;
+$primaryColorBlur: #f5f4f2;
+$textPrimaryColor: #616f7a;
+$textHeaderColor: #a7733f;
+$textHeaderColorBlur: #b3ada7;
+$white: #fff;
+$shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px,
+  rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px,
+  rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+html {
+  font-size: 62.5%;
+}
+
+.App {
+  text-align: center;
+  background-color: $primaryColor;
+  color: $textPrimaryColor;
+  font-size: 2rem;
+  max-inline-size: 2550px;
+  margin: 0 auto;
+}
+.container.full {
+  max-inline-size: 100%;
+  margin: 0;
+}
+
+.header {
+  color: $textHeaderColorBlur;
+  font-size: 3rem;
+}
+
+.header--wrap {
+  box-shadow: $shadow;
+}
+
+.header__logo {
+  max-width: 200px;
+}
+
+.dropdown-toggle::after {
+  position: absolute;
+  top: 16px;
+  left: 95%;
+}
+
+.nav-link {
+  text-align: start;
+}
+.navbar-nav {
+  background-color: $primaryColorBlur;
+  margin-top: 32px;
+  padding: 8px 12px;
+}
+
+.nav-item.dropdown + .nav-item.dropdown {
+  border-top: 1px solid #ccc;
+}
+
+.dropdown-menu {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  --bs-dropdown-item-padding-x: 0;
+  --bs-dropdown-item-padding-y: 0;
+  --bs-dropdown-header-color: #6c757d;
+  --bs-dropdown-header-padding-x: 0;
+  --bs-dropdown-header-padding-y: 0;
+}
+
+.dropdown-menu.show a {
+  padding-bottom: 14px;
+}
+.dropdown-toggle.nav-link {
+  color: $textHeaderColor !important;
+}
+
+.dropdown-menu a {
+  max-inline-size: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background-color: transparent !important;
+}
+
+a.dropdown-item {
+  font-size: 2.8rem;
+  color: $textHeaderColorBlur;
+}
+
+.navbar-toggler-icon {
+  width: 4rem;
+  height: 4rem;
+  color: $textHeaderColor;
+}
+
+button.navbar-toggler.collapsed {
+  border: none !important;
+  outline: none;
+  --bs-border-width: 0;
+}
+
+.carousel-caption {
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 3rem;
+  font-weight: 400;
+  display: grid;
+  place-content: center;
+  button {
+    justify-self: center;
+  }
+}
+
+.carousel-caption h3 {
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.btn-banner {
+  background-color: $white;
+  color: $textPrimaryColor;
+  border: none;
+  padding: 14px 18px;
+  font-size: 2.5rem;
+}
+
+.btn-banner:hover {
+  background-color: $primaryColor;
+  color: $textPrimaryColor;
+}
+
+.font-h {
+  font-size: 3rem;
+  color: $textHeaderColor;
+  margin-top: 24px;
+}
+
+.color-h {
+  color: $textHeaderColor;
+}
+
+main {
+  .main__item {
+    margin-top: 60px;
+  }
+
+  .map {
+    height: 100%;
+    min-height: 400px;
+  }
+
+  .main__item__title,
+  .body__title {
+    h2 {
+      font-size: 3rem;
+      color: $textHeaderColor;
+    }
+    span {
+      margin-top: 32px;
+    }
+  }
+  .body__content {
+    margin-top: 30px;
+  }
+
+  .main__item__head h4 {
+    text-align: start;
+    position: relative;
+  }
+
+  .main__item__head h4::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 130px;
+    right: 0;
+    background-color: transparent;
+    border-top: 2px solid $textHeaderColor;
+  }
+
+  .main__item.contact {
+    margin-top: 70px;
+  }
+
+  .product-item {
+    margin-top: 42px;
+    span {
+      font-size: 2.5rem;
+      padding: 16px 20px;
+    }
+  }
+
+  .btn.btn-search {
+    background-color: $textHeaderColor;
+    font-size: 2rem;
+    color: $white;
+  }
+
+  .form-full {
+    background-color: $textPrimaryColor;
+  }
+
+  .contact {
+    margin-top: 24px;
+  }
+
+  .contact__item {
+    text-align: start;
+    border-bottom: 2px solid $textPrimaryColor;
+    padding: 20px 0;
+  }
+
+  .contact__item h3 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    padding: 12px 0px;
+  }
+
+  .btn-banner.btn.btn-primary:hover {
+    background-color: $textHeaderColor;
+    color: $white;
+  }
+
+  .contact__body {
+    max-height: 500px;
+    overflow-y: auto;
+  }
+}
+
+.footer {
+  margin-top: 60px;
+  background-color: $textHeaderColorBlur;
+  color: $white;
+}
+
+a.dropdown-item:hover {
+  color: $textHeaderColor;
+}
+
+.banner {
+  margin-top: 72px;
+}
+
+@media (min-width: 992px) {
+  .backgroud-primary {
+    background-color: $primaryColor;
+  }
+
+  .dropdown-toggle::after {
+    position: relative;
+    top: 0;
+    left: 6px;
+  }
+
+  .navbar-nav {
+    margin-top: 0;
+    margin-right: 0 !important;
+    background-color: $primaryColor;
+    width: max(70%, 600px);
+    justify-content: space-between;
+  }
+
+  .navbar-collapse.collapse {
+    justify-content: end;
+  }
+
+  .nav-item.dropdown + .nav-item.dropdown {
+    border: none;
+  }
+
+  .dropdown-toggle.nav-link {
+    font-size: 1.5rem;
+  }
+
+  .dropdown-menu {
+    background-color: $primaryColor;
+    box-shadow: $shadow;
+    padding: 12px 16px;
+  }
+
+  a.dropdown-item {
+    font-size: 1.6rem;
+  }
+
+  .dropdown-menu[data-bs-popper] {
+    top: 150%;
+    min-width: 250px;
+  }
+
+  .carousel-item {
+    max-height: 700px;
+  }
+
+  .main__item__img {
+    height: 700px;
+    overflow: hidden;
+  }
+
+  .img img {
+    max-height: 700px;
+    object-fit: cover;
+  }
+
+  .btn-banner.btn.btn-primary {
+    margin-top: 24px;
+  }
+
+  .absolute {
+    background-color: #fff;
+    width: 727px;
+    overflow: hidden;
+    background-color: transparent;
+  }
+
+  .item-md {
+    width: 662px;
+    height: 366px;
+    position: relative;
+    background-color: #9f662d;
+    transform: translate(-5px, 169px) rotate(319deg);
+    border: 12px solid $white;
+  }
+
+  .item-sm {
+    width: 236px;
+    height: 242px;
+    position: relative;
+    transform: translate(460px, 62px) rotate(49deg);
+    border: 12px solid #fff;
+  }
+
+  .item-lg {
+    width: 658px;
+    height: 500px;
+    position: absolute;
+    background: #243746;
+    transform: translate(-157px, -111px) rotate(-41deg);
+  }
+
+  .absolute-slogan {
+    transform: translateX(-50%);
+  }
+
+  .header--wrap {
+    max-inline-size: 2550px;
+    margin: 0 auto;
+    padding: 0 80px;
+    background-color: $primaryColor;
+  }
+}
+
+@media (min-width: 1400px) {
+  .navbar-nav {
+    width: 700px;
+    justify-content: space-around;
+  }
+}
